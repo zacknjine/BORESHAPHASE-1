@@ -1,0 +1,34 @@
+function fetchData() {
+    fetch("http://localhost:3000/weekly_expense")
+      .then(response => response.json())
+      .then(data => { renderWeeklyExpensesTable(data) })
+  }
+  fetchData()
+  function renderWeeklyExpensesTable(data) {
+    const tbody = document.querySelector("#weekly-expenses-tbody")
+    data.forEach(element => {
+      const tr = document.createElement("tr")
+      tr.innerHTML = `
+    <td>${element.expense_type}</td>
+              <td>${element.amount_spent}</td>
+              `
+      tbody.appendChild(tr)
+    });
+  }
+  function addWeeklyExpenses() {
+    const expenseType = document.querySelector("#expense_type").value;
+  const amountSpent = document.querySelector("#amount_spent").value;
+    fetch("http://localhost:3000/weekly_expense", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      }, body: JSON.stringify({
+        expense_type: expense_type, amount_spent: amount_spent
+      })
+    }).then(response=>response.json()).catch(error=>console.log(error))
+    
+  
+
+  
+
+}

@@ -1,0 +1,71 @@
+{
+  "farm_inputs": [
+    {
+      "id": "e919",
+      "fertiliser": "fax",
+      "kgs_sold": "20",
+      "amount_sold": "200"
+    },
+    {
+      "id": "c739",
+      "fertiliser": "DAP",
+      "kgs_sold": "20",
+      "amount_sold": "3000"
+    },
+    {
+      "id": "49ef",
+      "fertiliser": "DAP",
+      "kgs_sold": "2",
+      "amount_sold": "300"
+    },
+    {
+      "id": "449c",
+      "fertiliser": "can",
+      "kgs_sold": "2",
+      "amount_sold": "28"
+    },
+    {
+      "id": "90a4",
+      "fertiliser": "jd c",
+      "kgs_sold": "2",
+      "amount_sold": "100"
+    }
+  ],
+  "weekly_expense": [
+    {
+      "id": "1",
+      "expense_type": "paid workers",
+      "amount_sold": "200"
+    },
+    {
+      "id": "1a23"
+    },
+    {
+      "id": "2192",
+      "expense_type": "paid workers",
+      "amount_spent": "100"
+    },
+    {
+      "id": "c94a",
+      "expense_type": "2",
+      "amount_spent": "1000"
+    }
+  ],
+  "weekly_kilos": [
+    {
+      "id": 4,
+      "kilos_sold": 2,
+      "kilos_rejected": 1
+    },
+    {
+      "id": "298a",
+      "expense_type": "2",
+      "amount_spent": "5"
+    },
+    {
+      "id": "b330",
+      "kilos_rejected": "2",
+      "kilos_sold": "5"
+    }
+  ]
+}

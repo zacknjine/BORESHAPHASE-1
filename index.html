@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+<body class="bg-[#16a34a] font-[Inter] h-screen relative">
+  <h1 class="font-semibold text-2xl text-center text-[#422006]">&#127808; BORESHA FRENCH BEANS-From farm to you!</h1>
+  <p class="text-center text-gray-700  px-5 py-5">Welcome to BORESHA FRENCH BEANS!!!Here you will be rest asssured of the  accountability of your farm records.ENJOY!!</p>
+  
+  <div class="background-image"></div>
+
+  <header class="py-4 shadow-md ">
+    <nav class="flex justify-between items-center w-[90%] mx-auto font-semibold">
+      <div>
+        <img class="w-16 h-auto" src="https://cdn-icons-png.flaticon.com/128/706/706195.png" alt="Logo">
+      </div>
+      <div id="nav-links" class="nav-links duration-500 md:static absolute bg-[#d9f99d] md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5">
+        <ul class="flex md:flex-row flex-col md:items-center md:gap-[3vw] gap-6">
+          <li>
+            <a href="#" onclick="showSection('farm-inputs-section')" class="text-gray-700 hover:text-[#3f6212] transition duration-300">Farm Inputs</a>
+          </li>
+          <li>
+            <a href="#" onclick="showSection('weekly-expenses-section')" class="text-gray-700 hover:text-[#3f6212] transition duration-300">Weekly Expenses</a>
+          </li>
+          <li>
+            <a href="#" onclick="showSection('weekly-kilos-section')" class="text-gray-700 hover:text-[#3f6212] transition duration-300">Weekly Kilos</a>
+          </li>
+         
+        
+        </ul>
+      </div>
+      <div class="flex items-center gap-6">
+      
+        
+       </div>
+      
+       
+
+<div class="hidden fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-50" id="modal">
+  <div class="flex justify-center h-svh-10">
+    <div class="bg-[#d9f99d] rounded shadow-md p-4 w-1/2">
+      
+
+      <h2 class="text-xl font-bold mb-5 mt-3 text-center">Sign in</h2>
+      <form>
+        <label for="email" class="block mb-2">Email</label>
+        <input type="email" id="email" class="w-full p-2 pl-10 text-sm text-gray-700">
+        <label for="password" class="block mb-2">Password</label>
+        <input type="password" id="password" class="w-full p-2 pl-10 text-sm text-gray-700">
+        <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mt-10 ">Sign in</button>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="flex items-center gap-6">
+  <button class="bg-[#65a30d] text-white px-5 py-2 rounded-full hover:bg-[#3f6212] font-semibold">Sign in</button>
+        <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
+      </div>
+  
+      
+    </nav>
+    
+  </header>
+
+  
+
+  <section id="farm-inputs-section" class="hidden p-6 bg-white mx-auto my-8 rounded-md shadow-md max-w-xl">
+    <h2 class="text-2xl font-bold mb-4">Farm Inputs</h2>
+    <form id="farm-inputs-form" class="w-full">
+      <label for="fertiliser">Fertiliser:</label>
+      <input type="text" id="fertiliser" placeholder="Enter fertiliser name" class="bg-gray-200 p-2 rounded-md w-full">
+      <br>
+      <label for="kg_sold">Kg Sold:</label>
+      <input type="number" id="kg_sold" placeholder="Enter kg sold" class="bg-gray-200 p-2 rounded-md w-full">
+      <br>
+      <label for="amount_sold">Amount Sold (KES):</label>
+      <input type="number" id="amount_sold" placeholder="Enter amount sold" class="bg-gray-200 p-2 rounded-md w-full">
+     <div id="submit">
+      <button class="bg-[#bef264] hover:bg-[#4d7c0f] mt-10"id="submit">Submit</button>
+     </div>
+    </form>
+    
+  </section>
+
+  
+  <section id="weekly-expenses-section" class="hidden p-6 bg-white mx-auto my-8 rounded-md shadow-md max-w-xl">
+    <h2 class="text-2xl font-bold mb-4">Weekly Expenses</h2>
+    <form id="weekly-expenses-form" class="w-full">
+      <label for="expense_type">Expense Type:</label>
+      <input type="text" id="expense_type" placeholder="Enter expense type" class="bg-gray-200 p-2 rounded-md w-full">
+      <br>
+      <label for="amount_spent">Amount Spent (KES):</label>
+      <input type="number" id="amount_spent" placeholder="Enter amount spent" class="bg-gray-200 p-2 rounded-md w-full">
+     
+      <div id="submit">
+        <button class="bg-[#bef264] hover:bg-[#4d7c0f] mt-10">Submit</button>
+      </div>
+    </form>
+  </section>
+
+  
+  <section id="weekly-kilos-section" class="hidden p-6 bg-white mx-auto my-8 rounded-md shadow-md max-w-xl">
+    <h2 class="text-2xl font-bold mb-4">Weekly Kilos</h2>
+    <form id="weekly-kilos-form" class="w-full">
+      <label for="kilos_sold">Kilos Sold:</label>
+      <input type="number" id="kilos_sold" placeholder="Enter kilos sold" class="bg-gray-200 p-2 rounded-md w-full">
+      <br>
+      <label for="kilos_rejected">Kilos Rejected:</label>
+      <input type="number" id="kilos_rejected" placeholder="Enter kilos rejected" class="bg-gray-200 p-2 rounded-md w-full">
+     <div id="submit">
+      <button class="bg-[#bef264] hover:bg-[#4d7c0f] mt-10">Submit</button>
+     </div>
+    </form>
+  </section>
+  
+  <img src="https://live.staticflickr.com/5305/5762966966_4c300b3b30_b.jpg" alt="farmers" class="w-full h-auto">
+  
+
+<footer class="grid grid-cols-3 gap-[100px] bg-[#16a34a] h-[350px] pt-20 text-[#431407]"> 
+  
+   <div class="font-semibold text-xl leading-relaxed">
+
+     <h3 class="text-2xl underline:[#020617]">About Us</h3>
+     <p> Welcome to BORESHA FRENCH BEANS,your number one farm records keeper. <br>We're dedicated to giving you the best farm record for the sake of accountability and convenience of your french beans farm. </p>
+       </div>
+      <div class="font-semibold text-xl leading-relaxed">
+       <h3 class="text-2xl">Contact Us</h3>
+      <p><span>📍Location:</span>Kianyaga village <br>Kirinyaga West Sub-county <br> Kirinyaga County</p> 
+       <p><span>📞call:</span>0123456789</p>
+       <p><span>✉️Email: </span>Boreshafrenchbeans@gmail.com</p>
+     </div>
+     <div class="">
+      <a href="https://www.instagram.com/yourprofile" target="_blank" class="text-pink-500 hover:text-pink-600">
+        <i class="fab fa-instagram fa-2x"></i>Instagram
+      </a><br>
+      
+      <a href="https://www.facebook.com/yourprofile" target="_blank" class="text-blue-600 hover:text-blue-700">
+        <i class="fab fa-facebook-f fa-2x"></i>Facebook
+      </a><br>
+
+      <a href="https://wa.me/yourphonenumber" target="_blank" class="text-green-500 hover:text-green-600">
+        <i class="fab fa-whatsapp fa-2x"></i>Whatsapp
+      </a>
+      
+      
+      
+      
+     </div>
+
+     
+
+   
+
+
+
+ </footer>
+  <script src="script.js"></script>
+</body>
+</html>
